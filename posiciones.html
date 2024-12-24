@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posiciones de las Carreras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="mensaje" class="centered-message"></div>
+
+    <div class="login-container centered-container">
+        <input type="password" id="admin-password" placeholder="Contraseña de administrador">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <div class="header centered-container" style="display: none;">
+        <div class="admin-panel">
+            <button onclick="guardarDatos()">Guardar</button>
+            <button onclick="vaciarCarreras()">Vaciar Carreras</button>
+            <div class="change-password-container">
+                <input type="password" id="new-admin-password" placeholder="Nueva contraseña de administrador">
+                <button onclick="changeAdminPassword()">Cambiar Contraseña</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tabla-row">
+            <!-- Carreras 1, 2 y 3 -->
+            <div class="tabla-container">
+                <h1>Carrera 1</h1>
+                <table id="carrera1">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Piloto</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de las carreras serán cargadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tabla-container">
+                <h1>Carrera 2</h1>
+                <table id="carrera2">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Piloto</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de las carreras serán cargadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tabla-container">
+                <h1>Carrera 3</h1>
+                <table id="carrera3">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Piloto</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de las carreras serán cargadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="tabla-row">
+            <!-- Carreras 4, 5 y Posiciones Generales -->
+            <div class="tabla-container">
+                <h1>Carrera 4</h1>
+                <table id="carrera4">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Piloto</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de las carreras serán cargadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tabla-container">
+                <h1>Carrera 5</h1>
+                <table id="carrera5">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Piloto</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de las carreras serán cargadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tabla-container">
+                <h1>Posiciones Generales</h1>
+                <table id="tablaPosiciones">
+                    <thead>
+                        <tr>
+                            <th>Piloto</th>
+                            <th>Puntaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las posiciones generales se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const storedPassword = localStorage.getItem('adminPassword');
+        const defaultPassword = 'Q29udHJhc2VhQGVzdA=='; // Contraseña predeterminada codificada en Base64.
+
+        function decodePassword(encodedPassword) {
+            return atob(encodedPassword);
+        }
+
+        function login() {
+            const inputPassword = document.getElementById('admin-password').value;
+            const decodedPassword = decodePassword(storedPassword || defaultPassword);
+            if (inputPassword === decodedPassword) {
+                document.querySelector('.header').style.display = 'block';
+                document.querySelector('.login-container').style.display = 'none';
+                alert('Acceso concedido!');
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        }
+
+        function cargarDatos() {
+            const puntosCarrera = [350, 320, 300, 280, 260, 240, 220, 200, 190, 180, 170, 160, 150, 140, 130, 120, 110, 100, 90, 80, 70, 60, 59, 40];
+            for (let i = 1; i <= 5; i++) {
+                const carreraData = JSON.parse(localStorage.getItem(`pilotosCarrera${i}`)) || [];
+                const carreraTable = document.getElementById(`carrera${i}`);
+                const tbody = carreraTable.querySelector('tbody');
+
+                tbody.innerHTML = '';
+
+                for (let j = 0; j < 24; j++) {
+                    const piloto = carreraData[j] || '';
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${j + 1}</td>
+                        <td><input type="text" class="piloto" value="${piloto}" style="width: 150px;" ${storedPassword ? '' : 'disabled'}></td>
+                        <td>${puntosCarrera[j]}</td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            }
+            actualizarPosicionesGenerales();
+        }
+
+        function actualizarPosicionesGenerales() {
+            const posiciones = {};
+            const puntosCarrera = [350, 320, 300, 280, 260, 240, 220, 200, 190, 180, 170, 160, 150, 140, 130, 120, 110, 100, 90, 80, 70, 60, 59, 40];
+
+            for (let i = 1; i <= 5; i++) {
+                const pilotosCarrera = JSON.parse(localStorage.getItem(`pilotosCarrera${i}`)) || [];
+                pilotosCarrera.forEach((piloto, index) => {
+                    if (piloto) {
+                        if (!posiciones[piloto]) posiciones[piloto] = 0;
+                        posiciones[piloto] += puntosCarrera[index];
+                    }
+                });
+            }
+
+            const posicionesGenerales = Object.entries(posiciones)
+                .sort((a, b) => b[1] - a[1]);
+
+            const tablaPosiciones = document.getElementById('tablaPosiciones').querySelector('tbody');
+            tablaPosiciones.innerHTML = '';
+
+            posicionesGenerales.forEach(([piloto, puntos], index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${piloto}</td>
+                    <td>${puntos}</td>
+                `;
+                tablaPosiciones.appendChild(row);
+            });
+        }
+
+        function guardarDatos() {
+            for (let i = 1; i <= 5; i++) {
+                const pilotosCarrera = Array.from(document.querySelectorAll(`#carrera${i} .piloto`)).map(input => input.value);
+                localStorage.setItem(`pilotosCarrera${i}`, JSON.stringify(pilotosCarrera));
+            }
+            actualizarPosicionesGenerales();
+            document.getElementById('mensaje').innerText = 'Datos guardados.';
+        }
+
+        function vaciarCarreras() {
+            for (let i = 1; i <= 5; i++) {
+                const carreraTable = document.getElementById(`carrera${i}`);
+                const inputs = carreraTable.querySelectorAll('.piloto');
+                inputs.forEach(input => {
+                    input.value = '';
+                });
+            }
+            for (let i = 1; i <= 5; i++) {
+                localStorage.removeItem(`pilotosCarrera${i}`);
+            }
+            actualizarPosicionesGenerales();
+            document.getElementById('mensaje').innerText = 'Todas las casillas de las carreras han sido vaciadas.';
+        }
+
+        document.getElementById('login-btn').addEventListener('click', login);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            cargarDatos();
+        });
+    </script>
+</body>
+</html>
