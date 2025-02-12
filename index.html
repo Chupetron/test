@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Fondo de la página */
+        }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 300px; /* Ancho del rectángulo vertical */
-            height: 800px; /* Alto del rectángulo vertical */
-            border: 1px solid #000; /* Opcional: borde para visualizar el contenedor */
+            width: 400px; /* Ancho del rectángulo vertical */
+            height: 100vh; /* Alto del rectángulo vertical */
+            border: 1px solid #000; /* Borde negro del contenedor */
             overflow: hidden;
-            background: url('Imagenes/background.png') no-repeat center center;
+            background: url('Imagenes/background') no-repeat center center;
             background-size: cover;
             position: relative;
         }
@@ -20,9 +28,11 @@
             width: 100%;
             height: 100px; /* Alto de cada rectángulo horizontal */
             overflow: hidden;
-            margin: 5px 0; /* Espaciado opcional entre rectángulos */
+            margin: 5px 0; /* Espaciado entre rectángulos */
             position: relative;
-            background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente para los rectángulos */
+            background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+            border: 1px solid #000; /* Borde negro de los contenedores de imágenes */
+            border-radius: 10px; /* Bordes redondeados de los rectángulos */
         }
         .thumbnail img {
             position: absolute;
@@ -36,13 +46,13 @@
 <body>
     <div class="container">
         <div class="thumbnail">
-            <img src="Imagenes/01.jpg" alt="Imagen 1">
+            <img src="path/to/image1.jpg" alt="Imagen 1">
         </div>
         <div class="thumbnail">
-            <img src="Imagenes/02.jpg" alt="Imagen 2">
+            <img src="path/to/image2.jpg" alt="Imagen 2">
         </div>
         <div class="thumbnail">
-            <img src="Imagenes/03.jpg" alt="Imagen 3">
+            <img src="path/to/image3.jpg" alt="Imagen 3">
         </div>
         <div class="thumbnail">
             <img src="path/to/image4.jpg" alt="Imagen 4">
