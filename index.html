@@ -16,8 +16,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 400px; /* Ancho del rectángulo vertical */
-            height: 100vh; /* Alto del rectángulo vertical */
+            width: 480px; /* Ancho del rectángulo vertical (20% más grande) */
+            height: calc(100vh + 20%); /* Alto del rectángulo vertical (20% más grande) */
             border: 1px solid #000; /* Borde negro del contenedor */
             overflow: hidden;
             background: url('Imagenes/background.jpg') no-repeat center center;
@@ -27,13 +27,14 @@
         }
         .thumbnail {
             width: calc(100% - 20px); /* Ancho menos padding lateral */
-            height: 130px; /* Alto de cada rectángulo horizontal */
+            height: 120px; /* Alto de cada rectángulo horizontal (20% más grande) */
             overflow: hidden;
-            margin: 10px 0; /* Espaciado entre rectángulos */
+            margin: 12px 0; /* Espaciado entre rectángulos (proporcionalmente más grande) */
             position: relative;
             background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
             border: 1px solid #000; /* Borde negro de los contenedores de imágenes */
             border-radius: 10px; /* Bordes redondeados de los rectángulos */
+            cursor: pointer; /* Cambio de cursor al pasar por encima */
         }
         .thumbnail img {
             position: absolute;
@@ -48,7 +49,7 @@
             transform: translateX(-50%);
             color: white;
             text-shadow: 2px 2px 4px black;
-            font-size: 26px;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
         }
@@ -56,31 +57,31 @@
 </head>
 <body>
     <div class="container">
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino1'">
             <img src="Imagenes/01.jpg" alt="Imagen 1">
-            <div class="text">Lunes 17/02/2555555555555555555555555555555555555555555555555555555555555555</div>
+            <div class="text">Texto 1</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino2'">
             <img src="Imagenes/02.jpg" alt="Imagen 2">
             <div class="text">Texto 2</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino3'">
             <img src="Imagenes/03.jpg" alt="Imagen 3">
             <div class="text">Texto 3</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino4'">
             <img src="path/to/image4.jpg" alt="Imagen 4">
             <div class="text">Texto 4</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino5'">
             <img src="path/to/image5.jpg" alt="Imagen 5">
             <div class="text">Texto 5</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino6'">
             <img src="path/to/image6.jpg" alt="Imagen 6">
             <div class="text">Texto 6</div>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail" onclick="window.location.href='https://example.com/destino7'">
             <img src="path/to/image7.jpg" alt="Imagen 7">
             <div class="text">Texto 7</div>
         </div>
