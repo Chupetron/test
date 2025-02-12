@@ -4,38 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .large-image {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px; /* Ancho del rectángulo vertical */
+            height: 800px; /* Alto del rectángulo vertical */
+            border: 1px solid #000; /* Opcional: borde para visualizar el contenedor */
+            overflow: hidden;
+            background: url('path/to/vertical-image.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
         }
-        .thumbnail-table {
+        .thumbnail {
             width: 100%;
-            margin-top: 10px;
-            text-align: center;
+            height: 100px; /* Alto de cada rectángulo horizontal */
+            overflow: hidden;
+            margin: 5px 0; /* Espaciado opcional entre rectángulos */
+            position: relative;
+            background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente para los rectángulos */
         }
-        .thumbnail-table img {
-            width: 100px;
-            height: auto;
+        .thumbnail img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
     <title>Galería de Imágenes</title>
 </head>
 <body>
-    <div>
-        <img src="path/to/large-image.jpg" class="large-image" alt="Imagen grande vertical">
-        <table class="thumbnail-table">
-            <tr>
-                <td><img src="Imagenes/01.jpg" alt="Imagen 1"></td>
-                <td><img src="Imagenes/02.jpg" alt="Imagen 2"></td>
-                <td><img src="Imagenes/03.jpg" alt="Imagen 3"></td>
-                <td><img src="path/to/image4.jpg" alt="Imagen 4"></td>
-                <td><img src="path/to/image5.jpg" alt="Imagen 5"></td>
-                <td><img src="path/to/image6.jpg" alt="Imagen 6"></td>
-                <td><img src="path/to/image7.jpg" alt="Imagen 7"></td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="thumbnail">
+            <img src="Imagenes/01.jpg" alt="Imagen 1">
+        </div>
+        <div class="thumbnail">
+            <img src="Imagenes/02.jpg" alt="Imagen 2">
+        </div>
+        <div class="thumbnail">
+            <img src="Imagenes/03.jpg" alt="Imagen 3">
+        </div>
+        <div class="thumbnail">
+            <img src="path/to/image4.jpg" alt="Imagen 4">
+        </div>
+        <div class="thumbnail">
+            <img src="path/to/image5.jpg" alt="Imagen 5">
+        </div>
+        <div class="thumbnail">
+            <img src="path/to/image6.jpg" alt="Imagen 6">
+        </div>
+        <div class="thumbnail">
+            <img src="path/to/image7.jpg" alt="Imagen 7">
+        </div>
     </div>
 </body>
 </html>
