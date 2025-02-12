@@ -53,6 +53,25 @@
             font-weight: bold;
             text-align: center;
         }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +103,9 @@
         <div class="thumbnail" onclick="window.location.href='https://example.com/destino7'">
             <img src="path/to/image7.jpg" alt="Imagen 7">
             <div class="text">Texto 7</div>
+        </div>
+        <div class="button-container">
+            <a href="posiciones.html" class="button">Ir a Posiciones</a>
         </div>
     </div>
 </body>
