@@ -16,19 +16,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 600px; /* Ancho del rectángulo vertical */
+            width: 400px; /* Ancho del rectángulo vertical */
             height: 100vh; /* Alto del rectángulo vertical */
             border: 1px solid #000; /* Borde negro del contenedor */
             overflow: hidden;
             background: url('Imagenes/background.jpg') no-repeat center center;
             background-size: cover;
             position: relative;
+            padding: 10px; /* Espacio entre los bordes laterales */
         }
         .thumbnail {
-            width: 100%;
+            width: calc(100% - 20px); /* Ancho menos padding lateral */
             height: 100px; /* Alto de cada rectángulo horizontal */
             overflow: hidden;
-            margin: 5px 0; /* Espaciado entre rectángulos */
+            margin: 10px 0; /* Espaciado entre rectángulos */
             position: relative;
             background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
             border: 1px solid #000; /* Borde negro de los contenedores de imágenes */
@@ -41,21 +42,20 @@
             transform: translate(-50%, -50%);
         }
     </style>
-    <title>Galería de Imágenes</title>
 </head>
 <body>
     <div class="container">
         <div class="thumbnail">
-            <img src="Imagenes/01.jpg" alt="Imagen 1">
+            <img src="path/to/image1.jpg" alt="Imagen 1">
         </div>
         <div class="thumbnail">
-            <img src="Imagenes/02.jpg" alt="Imagen 2">
+            <img src="path/to/image2.jpg" alt="Imagen 2">
         </div>
         <div class="thumbnail">
-            <img src="Imagenes/03.jpg" alt="Imagen 3">
+            <img src="path/to/image3.jpg" alt="Imagen 3">
         </div>
         <div class="thumbnail">
-            <img src="Disponible" alt="Imagen 4">
+            <img src="path/to/image4.jpg" alt="Imagen 4">
         </div>
         <div class="thumbnail">
             <img src="path/to/image5.jpg" alt="Imagen 5">
