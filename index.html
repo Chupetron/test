@@ -32,15 +32,14 @@
             margin: 12px 0; /* Espaciado entre rectángulos (proporcionalmente más grande) */
             position: relative;
             background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
-            border: 1px solid #000; /* Borde negro de los contenedores de imágenes */
+            border: 1px solid #000; /* Borde negro de los contenedores de videos */
             border-radius: 10px; /* Bordes redondeados de los rectángulos */
             cursor: pointer; /* Cambio de cursor al pasar por encima */
         }
-        .thumbnail img {
+        .thumbnail video {
             width: 100%;
-            height: auto;
-            position: static;
-            transform: none;
+            height: 100%;
+            object-fit: cover; /* Ajustar el video al contenedor */
         }
         .thumbnail .text {
             position: absolute;
@@ -77,32 +76,33 @@
 <body>
     <div class="container">
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/01.jpg" alt="Imagen 1">
+            <video src="Videos/video1.mp4" autoplay muted loop></video>
             <div class="text">Lunes 17/02/25</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/02.jpg" alt="Imagen 2">
+            <video src="Videos/video2.mp4" autoplay muted loop></video>
             <div class="text">Texto 2</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/03.jpg" alt="Imagen 3">
+            <video src="Videos/video3.mp4" autoplay muted loop></video>
             <div class="text">Texto 3</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/04.jpg" alt="Imagen 4">
+            <video src="Videos/video4.mp4" autoplay muted loop></video>
             <div class="text">Texto 4</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/LMLogo.png" alt="Imagen 5">
+            <video src="Videos/video5.mp4" autoplay muted loop></video>
             <div class="text">Texto 5</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/LMLogo.png" alt="Imagen 6">
+            <video src="Videos/video6.mp4" autoplay muted loop></video>
             <div class="text">Texto 6</div>
         </div>
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <img src="Imagenes/LMLogo.png" alt="Imagen 7">
+            <video src="Videos/video7.mp4" autoplay muted loop></video>
             <div class="text">Texto 7</div>
         </div>
+    </div>
 </body>
 </html>
