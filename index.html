@@ -16,7 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 500px; /* Ancho del rectángulo vertical (un poco más ancho) */
+            width: 500px; /* Ancho del rectángulo vertical */
             height: calc(100vh + 20%); /* Alto del rectángulo vertical (20% más grande) */
             border: 1px solid #000; /* Borde negro del contenedor */
             overflow: hidden;
@@ -27,9 +27,9 @@
         }
         .thumbnail {
             width: calc(100% - 20px); /* Ancho menos padding lateral */
-            height: 120px; /* Alto de cada rectángulo horizontal (20% más grande) */
+            height: 120px; /* Alto de cada rectángulo horizontal */
             overflow: hidden;
-            margin: 12px 0; /* Espaciado entre rectángulos (proporcionalmente más grande) */
+            margin: 12px 0; /* Espaciado entre rectángulos */
             position: relative;
             background: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
             border: 1px solid #000; /* Borde negro de los contenedores de videos */
@@ -75,32 +75,66 @@
 </head>
 <body>
     <div class="container">
+        <!-- Video 1 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/daytona.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/daytona.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Lunes 17/02/25</div>
         </div>
+
+        <!-- Video 2 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video2.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video2.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 2</div>
         </div>
+
+        <!-- Video 3 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video3.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 3</div>
         </div>
+
+        <!-- Video 4 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video4.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video4.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 4</div>
         </div>
+
+        <!-- Video 5 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video5.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video5.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 5</div>
         </div>
+
+        <!-- Video 6 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video6.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video6.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 6</div>
         </div>
+
+        <!-- Video 7 -->
         <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-            <video src="Videos/video7.mp4" autoplay muted loop></video>
+            <video autoplay muted loop controls>
+                <source src="Videos/video7.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
             <div class="text">Texto 7</div>
         </div>
     </div>
