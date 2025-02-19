@@ -57,12 +57,6 @@
       height: 100%;
       object-fit: cover;
     }
-    .thumbnail .fallback-image {
-      display: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
     .thumbnail .text {
       position: absolute;
       bottom: 10px;
@@ -133,77 +127,70 @@
     </section>
   </div>
   
-  <!-- SECCIÓN SERVICIOS (Sección reemplazada, responsiva y con fallback de imagen) -->
+  <!-- SECCIÓN SERVICIOS (Reemplazada, responsiva y con fallback usando poster) -->
   <section id="servicios">
-    <h3 class="titulo-seccion">Próximas Carrera</h3>        
+    <h3 class="titulo-seccion">Próxima Carrera</h3>        
     <div class="container">
       <!-- Video 1 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/daytona.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Lunes 17/02/25</div>
       </div>
   
       <!-- Video 2 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/video2.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 2</div>
       </div>
   
       <!-- Video 3 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/nascar.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 3</div>
       </div>
   
       <!-- Video 4 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/video4.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 4</div>
       </div>
   
       <!-- Video 5 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/video5.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 5</div>
       </div>
   
       <!-- Video 6 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/video6.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 6</div>
       </div>
   
       <!-- Video 7 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop onerror="this.style.display='none'; var fallback = this.parentNode.querySelector('.fallback-image'); if(fallback){ fallback.style.display='block'; }">
+        <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/video7.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <img src="img/logo-sin-fondo.png" alt="Fallback" class="fallback-image">
         <div class="text">Texto 7</div>
       </div>
     </div>
