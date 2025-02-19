@@ -13,7 +13,6 @@
   <!-- título -->
   <title>Latam-MotorSport LM</title>
   <!-- icono favicon -->
-  <!--<link rel="icon" type="image/x-icon" href="icon/code-solid.svg">-->
   <link rel="icon" href="./icon/casco.ico">
   <!-- Open Graph data -->
   <meta property="og:title" content="Latam-MotorSport" />
@@ -21,68 +20,6 @@
   <meta property="og:url" content="https://cyberenterados.github.io/latam-motorsport/" />
   <meta property="og:image" content="https://pbs.twimg.com/media/Gbjzp_HWsAAjVKE?format=png&name=small" />
   <meta property="og:description" content="Latam-MotorSport"/>
-  
-  <!-- Estilos adicionales para la sección reemplazada responsiva -->
-  <style>
-    /* Contenedor para la nueva sección de videos */
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 500px; /* Máximo ancho similar al anterior */
-      min-height: 80vh; /* Se adapta al alto de la pantalla */
-      border: 1px solid #000;
-      overflow: hidden;
-      background: url('Imagenes/background2.jpg') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      padding: 10px;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
-    .thumbnail {
-      width: 100%;
-      height: 120px;
-      overflow: hidden;
-      margin: 12px 0;
-      position: relative;
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid #000;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .thumbnail video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .thumbnail .text {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      text-shadow: 2px 2px 4px black;
-      font-size: 25px;
-      font-weight: bold;
-      text-align: center;
-    }
-    /* Ajustes para dispositivos móviles */
-    @media (max-width: 600px) {
-      .container {
-        padding: 5px;
-        min-height: auto;
-      }
-      .thumbnail {
-        height: 100px;
-        margin: 10px 0;
-      }
-      .thumbnail .text {
-        font-size: 18px;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- SECCIÓN INICIO -->
@@ -98,17 +35,14 @@
       <div class="contenido">
         <header>
           <div class="contenido-header">
-            <!--<h1>LM</h1>-->
             <img src="./img/logo-sin-fondo.png" alt="LM LOGO" class="lm-logo">
-            <nav id="nav" class="">
+            <nav id="nav">
               <ul id="links">
                 <li><a href="#inicio" class="seleccionando" onclick="seleccionar(this)">Inicio</a></li>
-                <!--<li><a href="#sobremi">Biografía</a></li>-->
                 <li><a href="#servicios">Próximas carreras</a></li>
                 <li><a href="#portafolio">Carreras YouTube</a></li>
               </ul>
             </nav>
-            <!-- Iconos del menú responsive -->
             <div id="icon-nav" onclick="responsiveMenu()" class="blanco">
               <a><i class="fa-solid fa-bars"></i></a>
             </div>
@@ -122,16 +56,14 @@
             </div>
           </div>                
         </header>
-        <div class="presentacion"></div>
       </div>
     </section>
   </div>
   
-  <!-- SECCIÓN SERVICIOS (Reemplazada, responsiva y con fallback usando poster) -->
+  <!-- SECCIÓN SERVICIOS -->
   <section id="servicios">
     <h3 class="titulo-seccion">Próxima Carrera</h3>        
     <div class="container">
-      <!-- Video 1 -->
       <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
         <video autoplay muted loop poster="img/logo-sin-fondo.png">
           <source src="Videos/daytona.mp4" type="video/mp4">
@@ -139,114 +71,17 @@
         </video>
         <div class="text">Lunes 17/02/25</div>
       </div>
-  
-      <!-- Video 2 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video2.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 2</div>
-      </div>
-  
-      <!-- Video 3 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/nascar.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 3</div>
-      </div>
-  
-      <!-- Video 4 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video4.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 4</div>
-      </div>
-  
-      <!-- Video 5 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video5.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 5</div>
-      </div>
-  
-      <!-- Video 6 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video6.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 6</div>
-      </div>
-  
-      <!-- Video 7 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video7.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">Texto 7</div>
-      </div>
     </div>
   </section>
   
   <!-- SECCIÓN PORTAFOLIO -->
   <section id="portafolio">        
     <h2 class="videos">Carreras Youtube</h2>
-    <div class="scroll-buttons">
-      <!--<button onclick="scrollLeft()">&#10094; Anterior</button>-->
-      <!--<button onclick="scrollRight()">Siguiente &#10095;</button>-->
-    </div>
     <div class="video-section" id="videoSection">
       <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HoA1pmNtIhA?si=xyz2lQ_6zWxKKJnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3u21L41V4aU?si=K82cDSwf5u9OA582" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TL9BIXLyaUU?si=JEIRQnHxj0q1Lvrj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/x6zM8C_fnec?si=dNR-WuYFjuQQwZIy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/t4IhQgeuWqw?si=kOsnkkVoN2ppM5Dx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xc8FjFkj2ro?si=0ne2o2JATIqN_u7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HkvzlPqWSxg?si=XUAQ-78vsWVKhNnv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MFbC9idiiJU?si=uTIMOswgQXa5asdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MFbC9idiiJU?si=uTIMOswgQXa5asdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/UMxkx3l8uCE?si=8ju4NmuS4TMHEmcB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HoA1pmNtIhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
-    <br>
-    <hr>
   </section>
   
   <!-- SECCIÓN FOOTER -->
