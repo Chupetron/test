@@ -308,6 +308,13 @@
     // Función para publicar la tabla "Posiciones Generales" en resultados.html usando JSONbin.io
     function publicarTabla() {
       var table = document.getElementById('posicionesGenerales');
+
+      // Actualiza el atributo value de cada input para reflejar su valor actual en el HTML
+      var inputs = table.querySelectorAll("input");
+      inputs.forEach(function(input) {
+          input.setAttribute("value", input.value);
+      });
+
       var html = table.outerHTML;
       var data = { "tablaPosicionesGenerales": html };
 
