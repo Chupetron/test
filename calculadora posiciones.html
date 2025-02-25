@@ -305,12 +305,29 @@
       document.getElementById('mensaje').innerText = 'Puntos actualizados.';
     }
 
-    // Función para publicar la tabla "Posiciones Generales" en resultados.html
+    // Función para publicar la tabla "Posiciones Generales" en resultados.html usando JSONbin.io
     function publicarTabla() {
       var table = document.getElementById('posicionesGenerales');
       var html = table.outerHTML;
-      localStorage.setItem('tablaPosicionesGenerales', html);
-      window.open('resultados.html', '_blank');
+      var data = { "tablaPosicionesGenerales": html };
+
+      fetch("https://api.jsonbin.io/v3/b/67bd18b0e41b4d34e49b4ebd", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Master-Key": "$2a$10$h8ZlsPiJ1eXRyWwRglxmC.KtBcQdEBty32Q8swnwK67yTfrbMG99S"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(json => {
+        console.log("Tabla publicada exitosamente", json);
+        window.open('resultados.html', '_blank');
+      })
+      .catch(err => {
+        console.error("Error al publicar la tabla:", err);
+        alert("Error al publicar la tabla. Revisa la consola para más detalles.");
+      });
     }
 
     window.onload = cargarDatos;
