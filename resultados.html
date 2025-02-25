@@ -154,12 +154,23 @@
   <div id="tablaPublicada"></div>
 
   <script>
-    // Al cargar la página, si existe una tabla de posiciones generales en localStorage, se inserta en el contenedor
+    // Al cargar la página, se obtiene la tabla publicada desde JSONbin.io
     window.onload = function() {
-      var tablaHTML = localStorage.getItem('tablaPosicionesGenerales');
-      if (tablaHTML) {
-        document.getElementById('tablaPublicada').innerHTML = tablaHTML;
-      }
+      fetch("https://api.jsonbin.io/v3/b/67bd18b0e41b4d34e49b4ebd/latest", {
+        method: "GET",
+        headers: {
+          "X-Master-Key": "$2a$10$h8ZlsPiJ1eXRyWwRglxmC.KtBcQdEBty32Q8swnwK67yTfrbMG99S"
+        }
+      })
+      .then(response => response.json())
+      .then(json => {
+        if (json && json.record && json.record.tablaPosicionesGenerales) {
+          document.getElementById('tablaPublicada').innerHTML = json.record.tablaPosicionesGenerales;
+        }
+      })
+      .catch(err => {
+        console.error("Error al obtener la tabla publicada:", err);
+      });
     }
   </script>
 </body>
