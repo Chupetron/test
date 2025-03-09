@@ -10,7 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background-image: url('img/fondofm.jpg'); /* Cambia la ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
             color: #fff;
         }
 
@@ -20,7 +23,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
             color: #fff;
             position: fixed;
             top: 0;
@@ -84,8 +87,12 @@
         }
 
         .servicios h3 {
-            font-size: 1.5rem;
+            font-size: 2rem; /* Cambia este valor para ajustar el tamaño del título */
             margin-bottom: 20px;
+        }
+
+        .servicios h3.text {
+            font-size: 1.5rem; /* Cambia este valor para ajustar el tamaño del subtítulo */
         }
 
         .servicios .container {
@@ -133,7 +140,7 @@
             transform: translateX(-50%);
             color: white;
             text-shadow: 2px 2px 4px black;
-            font-size: 10px;
+            font-size: 15px; /* Cambia este valor para ajustar el tamaño del texto */
             font-weight: bold;
             text-align: center;
         }
@@ -173,10 +180,13 @@
                 color: #fff;
                 font-size: 24px;
                 cursor: pointer;
+                position: absolute; /* Añade esto */
+                left: 20px; /* Mueve el icono hacia la izquierda */
+                top: 10px; /* Ajusta la posición vertical si es necesario */
             }
 
             .servicios .container {
-                padding: 15px;
+                padding: 5px;
                 min-height: auto;
             }
 
@@ -186,7 +196,7 @@
             }
 
             .servicios .thumbnail .text {
-                font-size: 18px;
+                font-size: 18px; /* Cambia este valor para ajustar el tamaño del texto en móviles */
             }
         }
     </style>
@@ -218,7 +228,7 @@
     <!-- Sección de servicios reemplazando el contenido debajo del video -->
     <section class="servicios">
         <h3>Próximas Carreras</h3>
-        <h3>(Selecciona el evento para más info y registrarse)</h3>
+        <h3 class="text">(Selecciona el evento para más info y registrarse)</h3>
         <div class="container">
             <!-- Video 1 -->
             <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/I51SoMeeqyF2BXDKbKnW7d'">
@@ -246,8 +256,6 @@
                 </video>
                 <div class="text"></div>
             </div>
-
-            
 
             <!-- Video 6 -->
             <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/JRgGI5x4VkrDy8o2OPEQ0p'">
