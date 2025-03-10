@@ -43,7 +43,6 @@
             padding: 0;
             display: flex;
             gap: 20px; /* Espacio entre los elementos del menú */
-            margin-left: -20px; /* Mueve los enlaces un poco más a la izquierda */
         }
 
         .header__nav ul li {
@@ -176,66 +175,66 @@
 
         /* Estilos responsivos para móviles */
         @media (max-width: 768px) {
-    .header {
-        padding: 10px; /* Reducir el padding en móviles */
-    }
+            .header {
+                padding: 10px; /* Reducir el padding en móviles */
+            }
 
-    .header__logo img {
-        height: 30px; /* Reducir el tamaño del logo en móviles */
-    }
+            .header__logo img {
+                height: 30px; /* Reducir el tamaño del logo en móviles */
+            }
 
-    .header__nav {
-        display: none; /* Ocultar la navegación en móviles */
-    }
+            .header__nav {
+                display: none; /* Ocultar la navegación en móviles */
+                position: absolute;
+                top: 60px;
+                left: 10px; /* Alineado con el botón de menú */
+                background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente */
+                padding: 10px;
+                border-radius: 5px;
+                width: 200px; /* Ancho del menú desplegable */
+            }
 
-    .header__nav.active {
-        display: block; /* Mostrar la navegación cuando está activa */
-        position: absolute;
-        top: 60px;
-        left: 10px; /* Cambiado de 'right' a 'left' */
-        background-color: #000;
-        padding: 10px;
-        border-radius: 5px;
-    }
+            .header__nav.active {
+                display: block; /* Mostrar la navegación cuando está activa */
+            }
 
-    .header__nav ul {
-        flex-direction: column; /* Mostrar enlaces en columna */
-        gap: 250px;
-        margin-left: 0;
-    }
+            .header__nav ul {
+                flex-direction: column; /* Mostrar enlaces en columna */
+                gap: 10px;
+            }
 
-    .menu-toggle {
-        display: block; /* Mostrar el botón de menú en móviles */
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-        position: absolute; /* Añade esto */
-        left: 250px; /* Mueve el icono más a la izquierda */
-        top: 10px; /* Ajusta la posición vertical si es necesario */
-    }
+            .menu-toggle {
+                display: block; /* Mostrar el botón de menú en móviles */
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                position: absolute;
+                left: 20px; /* Ajusta la posición del botón */
+                top: 10px;
+            }
 
-    .servicios .container {
-        padding: 5px;
-        min-height: auto;
-    }
+            .servicios .container {
+                padding: 5px;
+                min-height: auto;
+            }
 
-    .servicios .thumbnail {
-        height: 100px;
-        margin: 10px 0;
-    }
+            .servicios .thumbnail {
+                height: 100px;
+                margin: 10px 0;
+            }
 
-    .servicios .thumbnail .text {
-        font-size: 18px; /* Cambia este valor para ajustar el tamaño del texto en móviles */
-    }
+            .servicios .thumbnail .text {
+                font-size: 18px; /* Cambia este valor para ajustar el tamaño del texto en móviles */
+            }
 
-    .footer {
-        padding: 15px;
-    }
+            .footer {
+                padding: 15px;
+            }
 
-    .footer a {
-        font-size: 20px;
-    }
-}
+            .footer a {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -264,10 +263,10 @@
 
     <!-- Sección de servicios reemplazando el contenido debajo del video -->
     <section class="servicios">
-	<div class="container">
-        <h3>Próximas Carreras</h3>
-        <h3 class="text">(Selecciona el evento para más info y registrarse)</h3>
-        
+        <div class="container">
+            <h3>Próximas Carreras</h3>
+            <h3 class="text">(Selecciona el evento para más info y registrarse)</h3>
+
             <!-- Video 1 -->
             <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/I51SoMeeqyF2BXDKbKnW7d'">
                 <video autoplay muted loop poster="Imagenes/logolm.png">
@@ -324,10 +323,20 @@
         <a href="https://discord.gg/ChJMa2Ex" target="_blank"><i class="fa-brands fa-discord"></i></a>
         <a href="https://www.instagram.com/latam.motorsport/profilecard/?igsh=NzQ0Z3R6bzJsdXBr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.twitch.tv/latamfm" target="_blank"><i class="fa-brands fa-twitch"></i></a>
-        <a href="https://www.tiktok.com/@latam.motorsport?_t=8qltHzFyv3t&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>    
+        <a href="https://www.tiktok.com/@latam.motorsport?_t=8qltHzFyv3t&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </footer>
 
-    <!-- js -->
-    <script src="js/main.js"></script>
+    <!-- JavaScript para el menú desplegable -->
+    <script>
+        // Selecciona el botón de menú y el menú de navegación
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        // Añade un evento de clic al botón de menú
+        menuToggle.addEventListener('click', () => {
+            // Alterna la clase 'active' en el menú de navegación
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
