@@ -14,7 +14,7 @@
   <title>Latam-MotorSport LM</title>
   <!-- icono favicon -->
   <!--<link rel="icon" type="image/x-icon" href="icon/code-solid.svg">-->
-  <link rel="icon" href="./icon/casco.ico">
+  <link rel="icon" href="./icon/lmlogo.png">
   <!-- Open Graph data -->
   <meta property="og:title" content="Latam-MotorSport" />
   <meta property="og:type" content="Latam-MotorSport" />
@@ -68,12 +68,12 @@
 
   .thumbnail .text {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
+    bottom: 20px;
+    left: 40%;
     transform: translateX(-50%);
     color: white;
     text-shadow: 2px 2px 4px black;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
   }
@@ -140,9 +140,9 @@
                 <li><a href="#inicio" class="seleccionando" onclick="seleccionar(this)">Inicio</a></li>
                 <!--<li><a href="#sobremi">Biografía</a></li>-->
                 <li><a href="#servicios">Próximas carreras</a></li>
-                <li><a href="fm.html">Carreras YouTube</a></li>
-		<li><a href="resultados.html"></li>
-		<li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</li>
+                <li><a href="#portafolio">Carreras YouTube</a></li>
+				<li><a href="resultados.html"></li>
+				<li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</li>
               </ul>
             </nav>
             <!-- Iconos del menú responsive -->
@@ -166,71 +166,64 @@
   
   <!-- SECCIÓN SERVICIOS (Reemplazada, responsiva y con fallback usando poster) -->
   <section id="servicios">
-    <h3 class="titulo-seccion">Próximas Carreras</h3>        
+    <h3 class="titulo-seccion">Próximos Eventos</h3>
+	  <h3 class="text">(Selecciona tu juego para más info y registrarse) </h3>
     <div class="container">
       <!-- Video 1 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/radical.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='fm.html'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="vid/Forza_Motorsport.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">PRÓXIMAMENTE</div>
+        <div class="text">FORZA MOTORSPORT</div>
       </div>
   
       <!-- Video 2 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/nascarkrl.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='wrc.html'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="vid/wrc.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">PRÓXIMAMENTE</div>
+        <div class="text">WRC 24</div>
       </div>
-  
-      <!-- Video 3 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/nascar.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-        <div class="text">...</div>
-      </div>
-  
+	    
       <!-- Video 4 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video4.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/HGlW7Uz9k0fKJ6GsB9BGVF'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">...</div>
+        <div class="text"></div>
       </div>
-  
+	    
       <!-- Video 5 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video5.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/G3iutI9pzZEJjeFbRIC4c6'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">...</div>
+        <div class="text"></div>
       </div>
   
       <!-- Video 6 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video6.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/JRgGI5x4VkrDy8o2OPEQ0p'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">...</div>
+        <div class="text"></div>
       </div>
-  
+
       <!-- Video 7 -->
-      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/CvhK0cHOKXoIEnT9ZNmwK4'">
-        <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="Videos/video7.mp4" type="video/mp4">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/IWItFGEcUpA8YqbazYBury'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
-        <div class="text">...</div>
+        <div class="text"></div>
       </div>
     </div>
+
   </section>
   
   <!-- SECCIÓN PORTAFOLIO -->
@@ -243,7 +236,11 @@
     <div class="video-section" id="videoSection">
       <div class="video-card">
         <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HoA1pmNtIhA?si=xyz2lQ_6zWxKKJnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="720" src="https://www.youtube.com/embed/g4EqI8duSoQ" title="Copa VW - Fecha 2 - Sebring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <h3></h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9KpFOgbl-gY" title="Copa VW - Fecha 1 - Catalunya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="video-card">
         <h3></h3>
@@ -272,14 +269,6 @@
       <div class="video-card">
         <h3></h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/MFbC9idiiJU?si=uTIMOswgQXa5asdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MFbC9idiiJU?si=uTIMOswgQXa5asdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card">
-        <h3></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/UMxkx3l8uCE?si=8ju4NmuS4TMHEmcB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <br>
