@@ -305,7 +305,18 @@
     <a href="https://www.tiktok.com/@latam.motorsport?_t=8qltHzFyv3t&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
   </footer>
 
-  <!-- JavaScript para el menú hamburguesa (verificar que js/main.js incluya la lógica para alternar la clase "active") -->
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+  <!-- JavaScript para el menú hamburguesa -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('nav');
+      
+      if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+    });
 </body>
 </html>
