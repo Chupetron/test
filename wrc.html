@@ -178,9 +178,10 @@
         }
 
         /* Estilos responsivos para móviles */
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
     .header {
         padding: 10px; /* Reducir el padding en móviles */
+        position: relative; /* Asegura que el menú se posicione relativo al header */
     }
 
     .header__logo img {
@@ -195,16 +196,25 @@
         display: block; /* Mostrar la navegación cuando está activa */
         position: absolute;
         top: 60px;
-        left: 10px; /* Cambiado de 'right' a 'left' */
+        right: 0; /* Alinea el menú completamente a la derecha */
         background-color: #000;
         padding: 10px;
         border-radius: 5px;
+        min-width: 200px; /* Asegura que el menú tenga suficiente ancho */
+        max-width: 90vw; /* Evita que el menú se corte en pantallas muy pequeñas */
+        z-index: 1000; /* Asegura que se muestre por encima de otros elementos */
     }
 
     .header__nav ul {
         flex-direction: column; /* Mostrar enlaces en columna */
         gap: 10px;
-        margin-left: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .header__nav ul li {
+        width: 100%; /* Asegura que los elementos ocupen todo el ancho del menú */
     }
 
     .menu-toggle {
@@ -212,9 +222,10 @@
         color: #fff;
         font-size: 24px;
         cursor: pointer;
-        position: absolute; /* Añade esto */
-        left: 10px; /* Mueve el icono más a la izquierda */
+        position: absolute;
+        right: 10px; /* Mueve el icono a la derecha */
         top: 10px; /* Ajusta la posición vertical si es necesario */
+        z-index: 1100; /* Asegura que el icono esté por encima */
     }
 
     .servicios .container {
@@ -239,6 +250,7 @@
         font-size: 20px;
     }
 }
+
     </style>
 </head>
 <body>
