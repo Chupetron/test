@@ -14,13 +14,15 @@
   <title>Latam-MotorSport LM</title>
   <!-- icono favicon -->
   <!--<link rel="icon" type="image/x-icon" href="icon/code-solid.svg">-->
-  <link rel="icon" href="./icon/lmlogo.png">
+  <link rel="icon" href="./icon/casco.ico">
   <!-- Open Graph data -->
   <meta property="og:title" content="Latam-MotorSport" />
-  <meta property="og:type" content="Latam-MotorSport" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cyberenterados.github.io/latam-motorsport/" />
-  <meta property="og:image" content="https://pbs.twimg.com/media/Gbjzp_HWsAAjVKE?format=png&name=small" />
+  <meta property="og:image" content="https://i.ibb.co/RTfDbtK1/lm-logo.png" />
   <meta property="og:description" content="Latam-MotorSport"/>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   
   <!-- Estilos adicionales para la sección reemplazada responsiva -->
   <style>
@@ -40,7 +42,6 @@
     padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
-
     /* Efecto visual mejorado */
     border-radius: 15px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -57,7 +58,7 @@
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Mismo efecto 3D */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Efecto 3D */
   }
 
   .thumbnail video {
@@ -96,7 +97,7 @@
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
   }
 
-  /* Ajustes para dispositivos móviles */
+  /* Ajustes para dispositivos móviles en esta sección */
   @media (max-width: 600px) {
     .container {
       padding: 5px;
@@ -116,15 +117,29 @@
       padding: 5px;
     }
   }
-</style>
-
+  
+  /* NUEVA SECCIÓN: Sobrescribir estilos móviles para que se muestre el video igual que en escritorio */
+  @media screen and (max-width: 768px) {
+    #inicio-v {
+      background: none !important;
+    }
+    .video-grande {
+      display: block !important;
+      width: 100%;
+      height: auto;
+    }
+    .video-pequena {
+      display: none !important;
+    }
+  }
+  </style>
 </head>
 <body>
   <!-- SECCIÓN INICIO -->
   <div id="inicio-v">
     <div class="video-fondo">
       <video class="video-grande" autoplay muted loop>
-        <source src="https://github.com/cyberenterados/latam-motorsport/raw/refs/heads/main/vid/banner-1.mp4" type="video/mp4">
+        <source src="vid/banner-1.mp4" type="video/mp4">
         Tu navegador no soporta el video.
       </video>
       <img src="#" alt="LMLOGO" class="smart-img"> 
@@ -141,8 +156,8 @@
                 <!--<li><a href="#sobremi">Biografía</a></li>-->
                 <li><a href="#servicios">Próximas carreras</a></li>
                 <li><a href="#portafolio">Carreras YouTube</a></li>
-				<li><a href="resultados.html"></li>
-				<li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</li>
+                <li><a href="resultados.html"></a></li>
+                <li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</a></li>
               </ul>
             </nav>
             <!-- Iconos del menú responsive -->
@@ -166,28 +181,63 @@
   
   <!-- SECCIÓN SERVICIOS (Reemplazada, responsiva y con fallback usando poster) -->
   <section id="servicios">
-    <h3 class="titulo-seccion">Próximos Eventos</h3>
-	  <h3 class="text">(Selecciona tu juego para más info y registrarse) </h3>
+    <h3 class="titulo-seccion">Próximas Carreras</h3>
+	  <h3 class="text">(Selecciona el evento para más info y registrarse) </h3>
     <div class="container">
       <!-- Video 1 -->
-      <div class="thumbnail" onclick="window.location.href='fm.html'">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/I51SoMeeqyF2BXDKbKnW7d'">
         <video autoplay muted loop poster="Imagenes/logolm.png">
-          <source src="vid/Forza_Motorsport.mp4" type="video/mp4">
+          <source src="Videos/radical.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
         <div class="text"></div>
       </div>
   
       <!-- Video 2 -->
-      <div class="thumbnail" onclick="window.location.href='wrc.html'">
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/HT5kqVtTDX6LjfI0Biwuap'">
         <video autoplay muted loop poster="Imagenes/logolm.png">
-          <source src="vid/wrc.mp4" type="video/mp4">
+          <source src="Videos/fma.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
         <div class="text"></div>
       </div>
-    </div>
+	    
+      <!-- Video 3 -->
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/G3iutI9pzZEJjeFbRIC4c6'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/drarg.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div class="text"></div>
+      </div>
 
+      <!-- Video 4 -->
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/DNHTxAHPmDH1S7ujVmyzoS'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/forzahorizon.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div class="text"></div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/IWItFGEcUpA8YqbazYBury'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/krlregular.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div class="text"></div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="thumbnail" onclick="window.location.href='https://chat.whatsapp.com/IWItFGEcUpA8YqbazYBury'">
+        <video autoplay muted loop poster="Imagenes/logolm.png">
+          <source src="Videos/krlendurance.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div class="text"></div>
+      </div>	    
+    </div>
   </section>
   
   <!-- SECCIÓN PORTAFOLIO -->
@@ -200,7 +250,11 @@
     <div class="video-section" id="videoSection">
       <div class="video-card">
         <h3></h3>
-        <iframe width="560" height="720" src="https://www.youtube.com/embed/g4EqI8duSoQ" title="Copa VW - Fecha 2 - Sebring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RFnPDx31hvE" title="Copa VW - Fecha 3 - Suzuka Este" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <h3></h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/g4EqI8duSoQ" title="Copa VW - Fecha 2 - Sebring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="video-card">
         <h3></h3>
