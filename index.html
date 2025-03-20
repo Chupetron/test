@@ -14,15 +14,13 @@
   <title>Latam-MotorSport LM</title>
   <!-- icono favicon -->
   <!--<link rel="icon" type="image/x-icon" href="icon/code-solid.svg">-->
-  <link rel="icon" href="./icon/casco.ico">
+  <link rel="icon" href="./icon/lmlogo.png">
   <!-- Open Graph data -->
   <meta property="og:title" content="Latam-MotorSport" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="Latam-MotorSport" />
   <meta property="og:url" content="https://cyberenterados.github.io/latam-motorsport/" />
-  <meta property="og:image" content="https://i.ibb.co/RTfDbtK1/lm-logo.png" />
+  <meta property="og:image" content="https://pbs.twimg.com/media/Gbjzp_HWsAAjVKE?format=png&name=small" />
   <meta property="og:description" content="Latam-MotorSport"/>
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   
   <!-- Estilos adicionales para la sección reemplazada responsiva -->
   <style>
@@ -42,6 +40,7 @@
     padding: 10px;
     box-sizing: border-box;
     margin: 0 auto;
+
     /* Efecto visual mejorado */
     border-radius: 15px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -58,7 +57,7 @@
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Efecto 3D */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Mismo efecto 3D */
   }
 
   .thumbnail video {
@@ -97,7 +96,7 @@
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
   }
 
-  /* Ajustes para dispositivos móviles en esta sección */
+  /* Ajustes para dispositivos móviles */
   @media (max-width: 600px) {
     .container {
       padding: 5px;
@@ -117,29 +116,15 @@
       padding: 5px;
     }
   }
-  
-  /* NUEVA SECCIÓN: Sobrescribir estilos móviles para que se muestre el video igual que en escritorio */
-  @media screen and (max-width: 768px) {
-    #inicio-v {
-      background: none !important;
-    }
-    .video-grande {
-      display: block !important;
-      width: 100%;
-      height: auto;
-    }
-    .video-pequena {
-      display: none !important;
-    }
-  }
-  </style>
+</style>
+
 </head>
 <body>
   <!-- SECCIÓN INICIO -->
   <div id="inicio-v">
     <div class="video-fondo">
       <video class="video-grande" autoplay muted loop>
-         <source src="vid/banner-1.mp4" type="video/mp4">
+        <source src="https://github.com/cyberenterados/latam-motorsport/raw/refs/heads/main/vid/banner-1.mp4" type="video/mp4">
         Tu navegador no soporta el video.
       </video>
       <img src="#" alt="LMLOGO" class="smart-img"> 
