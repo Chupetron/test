@@ -13,26 +13,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<!-- Open Graph data -->
-<meta property="og:title" content="Latam-MotorSport" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cyberenterados.github.io/latam-motorsport/" />
-<meta property="og:image" content="https://i.ibb.co/RTfDbtK1/lm-logo.png" />
-<meta property="og:description" content="Latam-MotorSport"/>
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  
   <style>
-    /* Reset y estilos globales */
+    /* Cargar la fuente Ethnocentric desde la carpeta local */
+    @font-face {
+      font-family: 'Ethnocentric';
+      src: url('font/ethnocentric.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Reset y estilos globales sin la fuente (se aplicará luego en body) */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Montserrat';
     }
     html {
       scroll-behavior: smooth;
     }
+    /* Aplicar la fuente Ethnocentric a todo el sitio */
     body {
+      font-family: 'Ethnocentric', sans-serif;
       background: url('img/fondo1.jpg') no-repeat center center fixed;
       background-size: cover;
     }
@@ -134,9 +136,9 @@
     #servicios .titulo-seccion {
       font-size: 22px;
       text-transform: uppercase;
-      color: #000000;
+      color: #b36d06;
       text-decoration: underline;
-      text-decoration-color: #000000;
+      text-decoration-color: #b36d06;
       text-decoration-thickness: 5px;
       margin-bottom: 20px;
     }
@@ -149,7 +151,7 @@
       max-width: 500px;
       border: 1px solid #000;
       overflow: hidden;
-      background: url('Imagenes/background2.jpg') no-repeat center center;
+      background: url('Imagenes/.jpg') no-repeat center center;
       background-size: cover;
       padding: 10px;
       margin: 20px auto;
@@ -274,6 +276,12 @@
       nav.responsive ul li { margin: 5px 0; }
       #icon-nav { display: flex; }
     }
+    
+    /* Sobrescribir la fuente para header y footer, manteniendo Montserrat */
+    #inicio .contenido header,
+    footer.footer {
+      font-family: 'Montserrat', sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -300,8 +308,8 @@
                 <li><a href="#servicios">Próximas carreras</a></li>
                 <li><a href="#portafolio">Carreras Youtube</a></li>
                 <li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</a></li>
-              <li><a href="https://racenet.com/">Racenet</a></li>
-	      </ul>    
+                <li><a href="https://racenet.com/">Racenet</a></li>
+			  </ul>
             </nav>
             <div class="redes">
               <a href="https://www.youtube.com/@latammotorsport/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
@@ -328,7 +336,7 @@
       <!-- Video 1 -->
       <div class="thumbnail" onclick="window.location.href='fm.html'">
         <video autoplay muted loop poster="img/logo-sin-fondo.png">
-          <source src="vid/fm.mp4" type="video/mp4">
+          <source src="vid/Forza_Motorsport.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
         </video>
         <div class=""></div>
