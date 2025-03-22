@@ -75,10 +75,11 @@
       color: #b36d06;
     }
     /* Logo a la izquierda */
-    #inicio .contenido header .lm-logo {
-      height: 50px;
-      width: 50px;
-    }
+#inicio .contenido header .lm-logo {
+  height: 25px; /* Ajusta la altura según lo necesites */
+  width: auto;  /* Esto asegura que el logo mantenga sus proporciones */
+  cursor: pointer;
+}
     /* Menú centrado */
     #inicio .contenido header nav {
       flex: 1;
@@ -277,6 +278,9 @@
   </style>
 </head>
 <body>
+  <!-- Elemento de audio (ruta y nombre de archivo a modificar según corresponda) -->
+  <audio id="audioSound" src="audio/encendido.mp3"></audio>
+  
   <!-- ===================== -->
   <!--      SECCIÓN INICIO   -->
   <!-- ===================== -->
@@ -293,14 +297,15 @@
       <div class="contenido">
         <header>
           <div class="contenido-header">
-            <img src="img/lm-logo.png" alt="LM Logo">
+            <!-- Se agregó onclick para reproducir el audio -->
+            <img src="img/lm-logo.png" alt="LM Logo" class="lm-logo" onclick="playAudio()">
             <nav id="nav">
               <ul id="links">
                 <li><a href="#inicio" class="seleccionando" onclick="seleccionar(this)">Inicio</a></li>
                 <li><a href="#servicios">Próximas carreras</a></li>
                 <li><a href="#portafolio">Carreras Youtube</a></li>
                 <li><a href="https://www.appsheet.com/start/5a156580-0a65-4f5a-96a9-d70a978aa359?platform=desktop#viewStack[0][identifier][Type]=Control&viewStack[0][identifier][Name]=Rating%20e-MSS&appName=BRASILe-MSS-986216252-24-07-10&tableNameToFilterOn=RatingApp">Rating e-MSS</a></li>
-              <li><a href="https://racenet.com/">Racenet</a></li>
+                <li><a href="https://racenet.com/">Racenet</a></li>
 	      </ul>    
             </nav>
             <div class="redes">
@@ -426,6 +431,12 @@
         el.classList.remove('seleccionando');
       });
       link.classList.add('seleccionando');
+    }
+    // Función para reproducir el audio al hacer clic en el logo
+    function playAudio() {
+      var audio = document.getElementById("audioSound");
+      audio.currentTime = 0;
+      audio.play();
     }
   </script>
 </body>
