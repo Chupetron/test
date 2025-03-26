@@ -327,23 +327,33 @@
 
   <!-- JavaScript para el efecto de transición del video de cabecera -->
   <script>
-    // Al cargar el DOM, agrega la clase "fullscreen" para iniciar en pantalla completa
-    document.addEventListener('DOMContentLoaded', function() {
+  // Función para aplicar el efecto solo en escritorio
+  function aplicarEfectoVideo() {
+    // Puedes ajustar el valor (768 en este caso) según tu criterio de "escritorio"
+    if (window.innerWidth > 768) {
       var videoContainer = document.querySelector('.video-container');
       if (videoContainer) {
         videoContainer.classList.add('fullscreen');
       }
-    });
+    }
+  }
 
-    // Cuando la página haya cargado por completo, remueve la clase "fullscreen" después de 2 segundos
-    window.addEventListener('load', function() {
-      setTimeout(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    aplicarEfectoVideo();
+  });
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      // Solo se remueve la clase si el efecto fue aplicado (en escritorio)
+      if (window.innerWidth > 768) {
         var videoContainer = document.querySelector('.video-container');
         if (videoContainer) {
           videoContainer.classList.remove('fullscreen');
         }
-      }, 2000); // Ajusta el retardo si es necesario
-    });
-  </script>
+      }
+    }, 2000); // Ajusta el retardo si es necesario
+  });
+</script>
+
 </body>
 </html>
